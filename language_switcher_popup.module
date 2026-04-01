@@ -16,7 +16,9 @@ function language_switcher_popup_help($route_name, RouteMatchInterface $route_ma
       $output = "<h3>" . t("About") . "</h3>";
       $output .= "<p>" . t("Shows a confirmation popup that search filters will be reset when users switch languages") . "</p>";
       $output .= "<h3>" . t("Configuration") . "</h3>";
+      // phpcs:ignore -- Avoid backslash escaping in translatable strings when possible, use '' quotes instead
       $output .= "<p>" . t("Configure the popup messages at <a href=\":config\">Language Switcher Popup Settings</a>.", [
+        // phpcs:ignore -- Namespaced classes/interfaces/traits should be referenced with use statements
         ":config" => \Drupal\Core\Url::fromRoute("language_switcher_popup.settings")->toString(),
       ]) . "</p>";
       return $output;
