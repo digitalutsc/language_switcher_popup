@@ -36,8 +36,12 @@ function language_switcher_popup_page_attachments(array &$attachments) {
   $language_manager = \Drupal::languageManager();
   $languages = $language_manager->getLanguages();
 
+  // 1. Get the default site language code
+  $default_langcode = $language_manager->getDefaultLanguage()->getId();
+
   $settings = [
     "enabled" => (bool) ($config->get("enable_popup") ?? TRUE),
+    "defaultLanguage" => $default_langcode, // 2. Add it directly to your settings array
   ];
 
   foreach ($languages as $langcode => $language) {

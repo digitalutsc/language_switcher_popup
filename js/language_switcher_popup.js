@@ -71,9 +71,13 @@
       // Process each language
       languageLinks.forEach(function (link) {
         var $link = $(link);
-        var targetUrl = $link.attr('href');       // link
-        var targetLang = $link.attr('hreflang');  // langcode
-
+        var targetLang = jQuery('html').attr('lang'); //$link.attr('hreflang');  // langcode
+	      var switchToLang = $link.attr('hreflang');
+        var targetUrl = window.location.origin + "/" + switchToLang  +  window.location.pathname.replace(targetLang + "/", "");
+	      
+        // Remove default language prefix from URL if present to prevent double language code in URL
+        targetUrl = targetUrl.replace(settings.languageSwitcherPopup.defaultLanguage + "/", "");	
+	      
         // Check language has valid config, dont show popup if not valid
         if (!targetLang || !settings.languageSwitcherPopup || !settings.languageSwitcherPopup[targetLang]) {
           return;
