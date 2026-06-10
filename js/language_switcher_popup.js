@@ -53,7 +53,7 @@
 
     // Style the Continue button (first button) with blue color using !important
     var $primaryBtn = $dialogElement.find('.ui-dialog-buttonset button:first-child');
-    $primaryBtn.attr('style', 'background-color: #007bff !important; background-image: none !important; border-color: #007bff !important; color: #fff !important;');
+    $primaryBtn.attr('style', 'background-color: #001228 !important; background-image: none !important; border-color: #001228 !important; color: #fff !important;');
   }
 
   Drupal.behaviors.languageSwitcherPopup = {
@@ -71,7 +71,7 @@
       // Process each language
       languageLinks.forEach(function (link) {
         var $link = $(link);
-        var targetLang = jQuery('html').attr('lang'); //$link.attr('hreflang');  // langcode
+        var targetLang = jQuery('html').attr('lang'); 
 	      var switchToLang = $link.attr('hreflang');
         var targetUrl = window.location.origin + "/" + switchToLang  +  window.location.pathname.replace(targetLang + "/", "");
 	      

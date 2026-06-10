@@ -41,7 +41,7 @@ function language_switcher_popup_page_attachments(array &$attachments) {
 
   $settings = [
     "enabled" => (bool) ($config->get("enable_popup") ?? TRUE),
-    "defaultLanguage" => $default_langcode, // 2. Add it directly to your settings array
+    "defaultLanguage" => $default_langcode,
   ];
 
   foreach ($languages as $langcode => $language) {
