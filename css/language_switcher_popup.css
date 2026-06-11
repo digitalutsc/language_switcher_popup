@@ -129,6 +129,7 @@
 .ui-dialog.language-switcher-popup-dialog .ui-dialog-buttonset button {
   flex: 1 1 0 !important;
   min-width: 100px !important;
+  font-size: inherit !important;
 }
 
 /* Cancel button */
