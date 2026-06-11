@@ -53,7 +53,7 @@
 
     // Style the Continue button (first button) with blue color using !important
     var $primaryBtn = $dialogElement.find('.ui-dialog-buttonset button:first-child');
-    $primaryBtn.attr('style', 'background-color: #001228 !important; background-image: none !important; border-color: #001228 !important; color: #fff !important;');
+    $primaryBtn.attr('style', 'background-color: #001228 !important; background-image: none !important; border-color: #001228 !important; color: #fff !important; font-size: inherit !important;');
   }
 
   Drupal.behaviors.languageSwitcherPopup = {
